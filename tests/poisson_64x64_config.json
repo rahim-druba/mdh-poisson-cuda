@@ -1,0 +1,19 @@
+{
+    "CACHE_L_CB": 0,
+    "CACHE_P_CB": 0,
+    "G_CB_RES_DEST_LEVEL": 2,
+    "G_CB_SIZE_L_1": 62,
+    "G_CB_SIZE_L_2": 62,
+    "L_CB_RES_DEST_LEVEL": 1,
+    "L_CB_SIZE_L_1": 16,
+    "L_CB_SIZE_L_2": 16,
+    "NUM_WG_L_1": 4,
+    "NUM_WG_L_2": 4,
+    "NUM_WI_L_1": 16,
+    "NUM_WI_L_2": 16,
+    "OCL_DIM_L_1": 1,
+    "OCL_DIM_L_2": 0,
+    "P_CB_RES_DEST_LEVEL": 0,
+    "P_CB_SIZE_L_1": 1,
+    "P_CB_SIZE_L_2": 1
+}
