@@ -23,7 +23,7 @@ GPU result is **bit-identical** to the serial reference. No loss of accuracy. Co
 
 The **2D Poisson equation** is one of the most fundamental PDEs in science and engineering -- it appears in electrostatics, fluid flow, heat conduction, and image processing. Solving it numerically by the **Jacobi iterative method** means applying the same 5-point stencil update to every interior grid point, thousands of times, until the solution converges.
 
-The **MDH framework** (Multi-Dimensional Homomorphisms) is a research compiler infrastructure that lets you express array computations as algebraic skeletons -- a map function `f()` applied element-wise and a reduction `g()` -- and then automatically generates efficient OpenCL or CUDA kernels from that specification. The framework was introduced in the PACT 2019 paper by Camus et al.
+The **MDH framework** (Multi-Dimensional Homomorphisms) is a research compiler infrastructure for expressing data-parallel array computations as algebraic skeletons over multi-dimensional arrays. It uses dimension-specific combine operators -- not a simple map-reduce -- and automatically generates efficient OpenCL or CUDA kernels from those specifications. The framework was introduced by Rasch, Schulze, and Gorlatch at PACT 2019.
 
 This repository extends MDH to support **stencil-based PDE solvers** for the first time on the CUDA backend. The entire GPU kernel is produced from a ~15-line C++ specification in `src/poisson/poisson.cpp`.
 
@@ -371,4 +371,4 @@ The serial and GPU solvers were run from the same initial condition (u = 0 every
 
 ## References
 
-- Camus et al., "Multi-Dimensional Homomorphisms and Their Implementation in OpenCL", PACT 2019
+- Ari Rasch, Richard Schulze, Sergei Gorlatch, "Generating Portable High-Performance Code via Multi-Dimensional Homomorphisms", PACT 2019
