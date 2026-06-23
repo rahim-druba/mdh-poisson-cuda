@@ -10,10 +10,10 @@ Auto-generated CUDA kernels for the 2D Poisson equation using the MDH (Multi-Dim
 |---|---|---|
 | Iterations to converge | 7700 | 7700 |
 | Final residual | 9.093e-05 | 9.093e-05 |
-| Compute time | 0.112 sec | 0.028 sec |
+| Compute time | 0.113 sec | 0.028 sec |
 | Max error vs exact solution | 4.608e-06 | 4.608e-06 |
 | Max diff GPU vs serial | -- | 0.000e+00 |
-| **Speedup** | | **3.98x** |
+| **Speedup** | | **~4x (4.10x)** |
 
 GPU result is **bit-identical** to the serial reference. No loss of accuracy. Convergence is reached in the same number of iterations.
 
@@ -281,7 +281,7 @@ Grid: 64x64  Interior: 62x62  EPS: 1e-04  MaxIter: 3000000
 Serial converged!
   Iterations        : 7700
   Final residual    : 9.093378e-05
-  Time              : 0.112 seconds
+  Time              : 0.113 seconds
   Max error vs exact: 4.607714e-06
 
 --- GPU Jacobi (MDH-generated CUDA) ---
@@ -289,19 +289,19 @@ Serial converged!
 GPU converged!
   Iterations            : 7700
   Final residual        : 9.093378e-05
-  GPU kernel time only  : 0.028 seconds  (28.113 ms)
-  GPU total wall time   : 0.066 seconds
+  GPU kernel time only  : 0.028 seconds  (27.554 ms)
+  GPU total wall time   : 0.064 seconds
   Max error vs exact    : 4.607714e-06
 
 === Comparison ===
   Metric                            Serial CPU       MDH GPU
   Iterations to converge                  7700          7700
   Final residual                  9.093378e-05  9.093378e-05
-  Compute time (seconds)                 0.112         0.028
+  Compute time (seconds)                 0.113         0.028
   Max error vs exact              4.607714e-06  4.607714e-06
   Max diff GPU vs serial                   ---  0.000000e+00
 
-  Speedup (serial / GPU kernel): 3.98x
+  Speedup (serial / GPU kernel): 4.10x
 
 Poisson (MDH) is SUCCESSFUL! Solutions match within 1e-6.
 ```
